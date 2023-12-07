@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Main from "./components/Main";
 import Sidenav from "./components/Sidenav";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <div className="">
         <Sidenav />
+        <Main />
       </div>
     </>
   );
