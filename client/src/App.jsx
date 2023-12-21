@@ -1,21 +1,21 @@
-import { useState } from "react";
-import Main from "./components/Main";
-import Sidenav from "./components/Sidenav";
-import Work from "./components/Work";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import MainPage from "./MainPage";
+import CountriesInfo from "./CountriesInfo";
+import FindACook from "./FindACook";
+import Azurcam from "./Azurcam";
+import Spiderman from "./Spiderman";
 
 function App() {
   return (
-    <>
-      <div className="">
-        <Sidenav />
-        <Main />
-        <Work />
-        <Projects />
-        <Contact />
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<MainPage />} />
+        <Route path="/azurcam" element={<Azurcam />} />
+        <Route path="/findacook" element={<FindACook />} />
+        <Route path="/countriesinfo" element={<CountriesInfo />} />
+        <Route path="/spiderman" element={<Spiderman />} />
+      </Routes>
+    </Router>
   );
 }
 
